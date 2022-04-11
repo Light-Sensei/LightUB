@@ -43,8 +43,8 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• Repo •", url="https://github.com/TeamUltroid/Ultroid"),
-        Button.url("• Support •", url="t.me/UltroidSupport"),
+        Button.url("• Kira •", url="https://t.me/itz_light_yagami"),
+        Button.url("• My Bot •", url="t.me/shikimoriXrobot"),
     ],
 ]
 
@@ -53,7 +53,7 @@ SUP_BUTTONS = [
 
 @in_pattern(owner=True, func=lambda x: not x.text)
 async def inline_alive(o):
-    MSG = "• **Ultroid Userbot •**"
+    MSG = "• **Kira Userbot •**"
     WEB0 = InputWebDocument(
         "https://telegra.ph/file/acd4f5d61369f74c5e7a7.jpg", 0, "image/jpg", []
     )
@@ -63,7 +63,7 @@ async def inline_alive(o):
             text=MSG,
             include_media=True,
             buttons=SUP_BUTTONS,
-            title="Ultroid Userbot",
+            title="Kira Userbot",
             description="Userbot | Telethon",
             url=TLINK,
             thumb=WEB0,
@@ -74,7 +74,7 @@ async def inline_alive(o):
         RES,
         private=True,
         cache_time=300,
-        switch_pm="👥 ULTROID PORTAL",
+        switch_pm="👥 KIRA PORTAL",
         switch_pm_param="start",
     )
 
@@ -99,7 +99,7 @@ async def inline_handler(event):
         )
     else:
         result = await event.builder.article(
-            title="Ultroid Help Menu", text=text, buttons=_main_help_menu
+            title="Kira Help Menu", text=text, buttons=_main_help_menu
         )
     await event.answer([result], private=True, cache_time=300, gallery=True)
 
@@ -189,7 +189,7 @@ async def uptd_plugin(event):
                 help_ += "\n"
     if not help_:
         help_ = f"{file} has no Detailed Help!"
-    help_ += "\n© @TeamUltroid"
+    help_ += "\n© @itz_light_yagami"
     buttons = []
     if INLINE_PIC:
         data = f"sndplug_{key}_{file}"
